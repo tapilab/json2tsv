@@ -1,11 +1,6 @@
 json2tsv
 ========
 
-![image](https://badge.fury.io/py/json2tsv.png%0A%20:target:%20http://badge.fury.io/py/json2tsv)
-
-![image](https://travis-ci.org/aronwc/json2tsv.png?branch=master%0A%20%20%20%20%20:target:%20https://travis-ci.org/aronwc/json2tsv)
-
-![image](https://pypip.in/d/json2tsv/badge.png%0A%20%20%20%20%20:target:%20https://pypi.python.org/pypi/json2tsv)
 
 Convert json to tab-separated format. Read from STDOUT and write to STDOUT. E.g.
 
