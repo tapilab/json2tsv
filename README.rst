@@ -1,7 +1,7 @@
 json2tsv
 ========
 
-Convert json to tab-separated format. Read from STDOUT and write to
+Convert json to tab-separated format. Read from STDIN and write to
 STDOUT. E.g.
 
 ::
