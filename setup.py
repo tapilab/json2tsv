@@ -50,6 +50,7 @@ setup(
     entry_points={
         'console_scripts': [
             'json2tsv = json2tsv.json2tsv:main',
+            'tsv2json = json2tsv.tsv2json:main',
         ],
     },
     test_suite='tests',
