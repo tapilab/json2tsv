@@ -9,7 +9,7 @@ import json
 import re
 import sys
 
-from . import open_read_utf8, open_write_utf8
+from . import open_read_utf8, open_write_utf8, unicode
 
 
 def main():
