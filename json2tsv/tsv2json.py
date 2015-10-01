@@ -6,6 +6,7 @@ e.g., cat my.tsv | tsv2json
 """
 import json
 import sys
+
 from . import open_read_utf8, open_write_utf8
 
 
@@ -34,4 +35,4 @@ def main():
                                                  ensure_ascii=False))
         except Exception as e:
             sys.stderr.write('bad line %s\n' % e)
-            print sys.exc_info()[0]
+            print(sys.exc_info()[0])
