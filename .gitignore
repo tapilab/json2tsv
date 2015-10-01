@@ -1,4 +1,9 @@
+# Python byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
+
+# Auto-generated manifest
+MANIFEST
 
 # C extensions
 *.so

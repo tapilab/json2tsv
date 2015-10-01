@@ -8,7 +8,9 @@ import argparse
 import json
 import re
 import sys
-from . import open_read_utf8, open_write_utf8
+
+from . import open_read_utf8, open_write_utf8, unicode
+
 
 def main():
     input = open_read_utf8(sys.stdin)
@@ -31,7 +33,7 @@ def run(input, output, fields, headers):
         try:
             obj_or_list = json.loads(line)
         except Exception as e:
-            sys.stderr.write('line %s is not valid JSON: %s\n' % (i+1, e))
+            sys.stderr.write('line %s is not valid JSON: %s\n' % (i + 1, e))
             continue
 
         if isinstance(obj_or_list, list):
@@ -45,8 +47,7 @@ def run(input, output, fields, headers):
             output.write('\n')
         else:
             sys.stderr.write('line %s is not a JSON list or object: %r\n' %
-                             (i+1, line))
-            continue
+                             (i + 1, line))
 
 
 def extract_row(fields, obj):
@@ -54,6 +55,8 @@ def extract_row(fields, obj):
 
 
 def extract_value(field, obj):
+    if field == "-":  # Special case -- return whole json object
+        return obj
     parts = field.split('.')
     for p in parts:
         obj = obj.get(p)
