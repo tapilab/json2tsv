@@ -8,7 +8,9 @@ import argparse
 import json
 import re
 import sys
+
 from . import open_read_utf8, open_write_utf8
+
 
 def main():
     input = open_read_utf8(sys.stdin)
@@ -54,6 +56,8 @@ def extract_row(fields, obj):
 
 
 def extract_value(field, obj):
+    if field == "-":  # Special case -- return whole json object
+        return obj
     parts = field.split('.')
     for p in parts:
         obj = obj.get(p)
