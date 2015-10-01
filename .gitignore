@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# Auto-generated manifest
+MANIFEST
+
 # C extensions
 *.so
 
