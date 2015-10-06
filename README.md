@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tapilab/json2tsv.png?branch=master)](https://travis-ci.org/tapilab/json2tsv)
+
 json2tsv
 ========
 
