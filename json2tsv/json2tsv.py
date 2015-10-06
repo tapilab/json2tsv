@@ -55,6 +55,18 @@ def extract_row(fields, obj):
 
 
 def extract_value(field, obj):
+    """
+    >>> js = {'id': 123, 'user': {'name': 'mary'}}
+    >>> extract_value('id', js)
+    123
+    >>> extract_value('user', js)
+    {'name': 'mary'}
+    >>> extract_value('user.name', js)
+    'mary'
+    >>> extract_value('-', js)
+    {'id': 123, 'user': {'name': 'mary'}}
+    >>> extract_value('not_valid', js)
+    """
     if field == "-":  # Special case -- return whole json object
         return obj
     parts = field.split('.')
