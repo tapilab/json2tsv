@@ -9,7 +9,7 @@ import json
 import re
 import sys
 
-from . import open_read_utf8, open_write_utf8, unicode
+from . import open_read_utf8, open_write_utf8, my_unicode
 
 
 def main():
@@ -79,7 +79,8 @@ def extract_value(field, obj):
 
 def rm_ws(s):
     """ Replace internal tabs/newlines with 5 spaces. """
-    return re.sub('[\n\t]', '    ', unicode(s))
+    # return re.sub('[\n\t]', '    ', s)
+    return re.sub('[\n\t]', '    ', my_unicode(s))
 
 
 def encode(val):
