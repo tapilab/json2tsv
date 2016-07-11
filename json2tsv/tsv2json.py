@@ -31,8 +31,7 @@ def main():
                         r[parts[-1]] = value
                     else:
                         d[field] = value
-                output.write('%s\n' % json.dumps(d, encoding='utf-8',
-                                                 ensure_ascii=False))
+                output.write('%s\n' % json.dumps(d, ensure_ascii=False))
         except Exception as e:
             sys.stderr.write('bad line %s\n' % e)
             print(sys.exc_info()[0])
