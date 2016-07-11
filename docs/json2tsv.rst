@@ -1,19 +1,30 @@
-json2tsv Package
+json2tsv package
 ================
 
-:mod:`json2tsv` Package
------------------------
+Submodules
+----------
 
-.. automodule:: json2tsv.__init__
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-:mod:`json2tsv` Module
-----------------------
+json2tsv.json2tsv module
+------------------------
 
 .. automodule:: json2tsv.json2tsv
     :members:
     :undoc-members:
     :show-inheritance:
 
+json2tsv.tsv2json module
+------------------------
+
+.. automodule:: json2tsv.tsv2json
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: json2tsv
+    :members:
+    :undoc-members:
+    :show-inheritance:
