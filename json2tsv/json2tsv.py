@@ -78,7 +78,8 @@ def extract_value(field, obj):
         return obj
     parts = field.split('.')
     for p in parts:
-        obj = obj.get(p)
-        if obj is None:
-            break
+        if isinstance(obj, dict) and p in obj:
+            obj = obj[p]
+        else:
+            return None
     return obj
